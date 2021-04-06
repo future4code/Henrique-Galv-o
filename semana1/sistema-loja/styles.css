@@ -1,4 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: cornsilk;
+}
+
 img{
     width: 200px;
     height: 200px;
+}
+.head-container{
+    background-color:burlywood;
+    margin: 10px auto;
+    padding: 4px;
+}
+.head-container h1{
+    color: black;
+    text-align: center;
+    
+}
+.head-container p{
+    color: black;
+    text-align: center;
+    font-size: large;
+    margin-bottom: 5px;
+}
+
+.menu-container a{
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+    display:inline-block;
+    margin-left: 15%;
+    border: 10px solid black;
+}
+
+.description{
+    background-color: bisque;
+    color: black;
+    border:4px solid   black;
+    text-align: center;
+}
+
+footer{
+    background-color: burlywood;
+    color: black;
+    font-size: larger;
+}
+
+table{
+    color: black;
+    margin-left: 33.3%;
+    background-color: cornsilk;
+    border: 4px solid black;
+}
+form{
+    color: black;
+    background-color: cornsilk;
+    margin-left: 33.3%;
+    margin-right: 33.3%;
+    border: 4px solid black;
+}
+.nomes{
+    color: black;
+    background-color: cornsilk;
 }
