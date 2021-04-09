@@ -1,22 +1,46 @@
-body{
-    margin: 0;
+*{
     padding: 0;
-    color: cornsilk;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    height: 150vh;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer> div{
+    background-color: burlywood;
+    border-top: 2px solid black;
+    text-align: center;
+    align-items: center;
 }
 
 img{
     width: 200px;
     height: 200px;
 }
+
+.icons img{
+    width: 50px;
+    height: 50px;
+}
+
 .head-container{
-    background-color:burlywood;
-    margin: 10px auto;
-    padding: 4px;
+    background-color: cornsilk;
+    margin: 0 auto;
+    padding: 8px;
+    height: 150px;
 }
 .head-container h1{
     color: black;
     text-align: center;
-    
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 30px;    
 }
 .head-container p{
     color: black;
@@ -26,41 +50,124 @@ img{
 }
 
 .menu-container a{
-    background-color: black;
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     display:inline-block;
-    margin-left: 15%;
-    border: 10px solid black;
+    margin-left: 8%;
+    padding: 4px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.menu-container a:hover{
+    color: gray;
+    font-size: larger;
+}
+
+.menu-container a:active{
+    color: purple;
+}
+
+.menu-container{
+    background-color: black;
+    border: 2px solid black ;
+    position: sticky;
+    top:0px;
 }
 
 .description{
-    background-color: bisque;
+    background-color: white;
     color: black;
-    border:4px solid   black;
+    border-bottom:4px solid   black;
     text-align: center;
 }
 
-footer{
-    background-color: burlywood;
+.description1{
+    background-color: white
     color: black;
-    font-size: larger;
+    text-align: center;
+ 
+}
+
+.description1 p{
+    padding-top: 16px;
+    color: black;
+    text-align: center;
+    font-size: larger;  
 }
 
 table{
     color: black;
-    margin-left: 33.3%;
+    margin: auto;
+    width:1000px;
     background-color: cornsilk;
-    border: 4px solid black;
+    border: 1px solid black;
 }
+
 form{
     color: black;
     background-color: cornsilk;
-    margin-left: 33.3%;
-    margin-right: 33.3%;
-    border: 4px solid black;
+    border-bottom: 2px solid black;
 }
 .nomes{
     color: black;
     background-color: cornsilk;
 }
+
+button{
+    border: transparent;
+    background-color: blue;
+    color: white;
+    border-radius:15%;
+    width: 80px;
+    height: 60px;   
+}
+
+button:hover{
+    background-color: black;
+}
+
+.form-add-1{
+    display: inline-block;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.form-add-2{
+    display: inline-block;
+    margin: 10px;
+    align-items: center;
+}
+
+.form-2{
+    background-color: white;
+    color: black;
+    border-bottom:4px solid   black;
+    text-align: center;
+}   
+
+.lista-vendas{
+    background-color: cornsilk;
+    border-bottom: 2px solid black;
+}
+
+.lista-vendas li{
+    margin-bottom: 10px;
+}
+.filtro{
+    border: 2px solid black;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.mouseicon{
+    height: 19px;
+    width: 19px;
+}
+
+.form-add-2 a{
+    text-decoration: none;
+    color: white;
+}
+  
