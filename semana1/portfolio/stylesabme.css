@@ -1,0 +1,183 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #132020;
+}
+
+body{
+    width: 100%;
+    height: 150VH;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    background-color: #132020;
+    color: black;
+}
+
+
+
+nav{
+    background-color: #132020;
+    width: 100%;
+    height: 120px;
+    color: black;
+}
+
+#nometopo {
+    font-family: 'Anton', sans-serif;
+    color: lightskyblue;
+    font-size: 48px;
+    position: absolute;
+    background-color: transparent;
+    top:40px;
+    left:40px;
+    letter-spacing: 0px;
+}
+
+
+.navbar a{
+    background-color: transparent;
+    display: inline-block;
+    font-family: 'anton';
+    font-size: 30px;
+    text-decoration: none;
+    color: lightskyblue;
+    position: sticky;
+    left:40px;
+    top: 5px;
+    margin-left: 40px;
+}
+
+nav p{
+    color: lightskyblue;
+    position: absolute;
+    top:100px;
+    left: 40px;
+    letter-spacing: 8.5px;
+}
+
+
+.menu-icon{
+   height: 60px;
+   width: 60px;
+   position: absolute;
+   left:90%;
+   top:50px;
+   border-radius: 50%;
+}
+
+nav:hover #nometopo {
+    text-shadow: -2px 0 0 #333333, 0px 0 0 #333333, 0 2px 0 #333333, 0 0px 0 #333333;
+    letter-spacing: 4px;
+}
+
+section{
+    position: ;
+    text-align: center;
+}
+
+.aboutme{
+    color: #FAA353;
+    font-size: 100px;
+    text-decoration:none;
+}
+
+section > h1{
+    color: #FAA353;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+section > p{
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social{
+    width: 100%;
+    margin-left:00px;
+    background-color: black;
+}
+
+.social a{
+    background-color: black;
+    margin-left: 40px;
+}
+
+.icones{
+    height: 50px;
+    background-color:transparent;
+}
+
+
+
+#title{
+    text-align: center;
+    padding-top: 50px;
+    color: lightskyblue;
+}
+
+.experienciasensino{
+    margin-left: 620px;
+}
+.experiencias{
+    background-color: linen;
+    color: black;
+    width: 50%;
+}
+.experiencias h2{
+    background-color: linen;
+    padding: 10px 0;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+.experiencias h3{
+    background-color: linen;
+    padding: 10px 0;
+}
+.experiencias ul{
+    background-color: linen;
+}
+.experiencias li{
+    background-color: linen;
+    padding:10px;
+    list-style-position: inside;
+    list-style-type:circle;
+}
+
+.ensinos{
+    display: inline-block;
+    background-color: linen;
+    color: black;
+    width: 50%;
+    padding-bottom: 20px;
+}
+.ensinos h2{
+    background-color: linen;
+    padding: 10px 0;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+.ensinos h3{
+    background-color: linen;
+    padding: 10px 0;
+}
+.ensinos ul{
+    background-color: linen;
+}
+.ensinos li{
+    background-color: linen;
+    padding:10px;
+    list-style-position: inside;
+    list-style-type:circle;
+}
+
