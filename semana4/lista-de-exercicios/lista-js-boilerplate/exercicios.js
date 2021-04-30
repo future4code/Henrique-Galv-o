@@ -29,6 +29,12 @@ function retornaNumerosParesElevadosADois (array) {
 
 function retornaNumerosPares (array) {
    // implemente sua lógica aqui
+   let soPares = array.filter((pares)=>{
+      if(pares%2 === 0){
+         return true
+      }
+   })
+   return soPares
    
 }
 
