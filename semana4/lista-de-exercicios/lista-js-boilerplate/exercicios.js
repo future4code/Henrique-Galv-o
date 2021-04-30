@@ -63,26 +63,58 @@ function retornaQuantidadeElementos (array) {
 
 function retornaExpressoesBooleanas() {
    // implemente sua lógica aqui
-   
+   const respostas = [false, false, true, true, true]
+   return respostas
 }
 
 //Exercício 7
 
 function retornaNNumerosPares(n) {
    // implemente sua lógica aqui
+   // let array=[0]
+   // for(i=0; i=n; i++){
+   //    array.push[i]
+   // }
+   // return array
+   //não sei se ta certo porque toda vez que vou no live server meu pc trava :(
+  
 }
 
 // Exercício 8
 
 function checaTriangulo(a, b, c) {
   // implemente sua lógica aqui
+   if(a == b && b == c){
+      return 'Equilátero'
+   } else if(a != b && b != c && c != a){
+      return 'Escaleno'
+   } else {
+      return 'Isósceles'
+   }
 }
+
 
 // Exercício 9
 
 function comparaDoisNumeros(num1, num2) {
    // implemente sua lógica aqui
+   let maior = num1
+   let menor = num2
+   const objeto = {
+      maiorNumero: maior,
+      maiorDivisivelporMenor:maior,
+      diferenca:maior,
+   }
+   if(num2 > maior){
+      maior = num2
+   }else if(num1 < maior){
+      menor = num1
+      return `maiorNumero: ${maior}`
+   }else if(maior%menor === 0){
+      return true
+   }   
 }
+
 
 // Exercício 10
 
