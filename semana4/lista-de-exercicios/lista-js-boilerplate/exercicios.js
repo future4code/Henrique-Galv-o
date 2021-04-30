@@ -9,18 +9,27 @@ function inverteArray(array) {
 
 }
 
-
-
 //Exercício 2
 
 function retornaNumerosParesElevadosADois (array) {
    // implemente sua lógica aqui
+   let paresADois = array.filter((numero)=>{
+      if(numero%2 === 0){
+         return true
+      }      
+   })
+   for (i = 0; i < paresADois.length; i++){
+      paresADois[i] = paresADois[i]**2
+   }
+   return paresADois
 }
+
 
 //Exercício 3
 
 function retornaNumerosPares (array) {
    // implemente sua lógica aqui
+   
 }
 
 //Exercício 4
