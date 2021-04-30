@@ -98,29 +98,35 @@ function checaTriangulo(a, b, c) {
 
 function comparaDoisNumeros(num1, num2) {
    // implemente sua lógica aqui
-   let maior = num1
-   let menor = num2
-   const objeto = {
-      maiorNumero: maior,
-      maiorDivisivelporMenor:maior,
-      diferenca:maior,
+   let objeto = {
+      maiorNumero: 0,
+      maiorDivisivelporMenor:false,
+      diferenca:0,
    }
-   if(num2 > maior){
-      maior = num2
-   }else if(num1 < maior){
-      menor = num1
-      return `maiorNumero: ${maior}`
-   }else if(maior%menor === 0){
-      return true
-   }   
-}
 
+   if(num1 > num2){
+      objeto.maiorNumero = num1,
+      objeto.maiorDivisivelporMenor =(num1 % num2 === 0),
+      objeto.diferenca = num1 - num2
+   } else{
+      objeto.maiorNumero = num2,
+      objeto.maiorDivisivelporMenor = (num2 % num1 === 0),
+      objeto.diferenca = num2 - num1
+   }
+   return objeto
+   }
+   
 
 // Exercício 10
 
 function segundoMaiorEMenor(array) {
    // implemente sua lógica aqui
+   let novo=[]
+   let arrays = array.sort(function(a, b){return a - b})
+   novo.push(arrays[6], arrays[1])
+   return novo
 }
+
 
 //Exercício 11
 
