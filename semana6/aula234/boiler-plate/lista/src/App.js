@@ -30,8 +30,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const tarefasNovo = localStorage.getItem("tarefas")
-    const tarefasObjeto = JSON.parse(tarefasNovo)
+    console.log('Chama')
+    const tarefasGuarda = localStorage.getItem("tarefas")
+    const tarefasObjeto = JSON.parse(tarefasGuarda)
 
     this.setState({tarefas: tarefasObjeto})
   }
