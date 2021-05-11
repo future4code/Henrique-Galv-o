@@ -29,14 +29,19 @@ class App extends React.Component {
     filtro: ''
   }
 
-  componentDidUpdate() {
-
-  };
-
   componentDidMount() {
+    const tarefasNovo = localStorage.getItem("tarefas")
+    const tarefasObjeto = JSON.parse(tarefasNovo)
 
-  };
+    this.setState({tarefas: tarefasObjeto})
+  }
 
+
+  componentDidUpdate() {
+    localStorage.setItem("tarefas", JSON.stringify(this.state.tarefas))
+  }
+
+  
   onChangeInput = (event) => {
     this.setState({inputValue: event.target.value})
   }
