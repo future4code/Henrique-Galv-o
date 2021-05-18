@@ -31,6 +31,12 @@ export default class Home extends React.Component {
         this.setState({ inputEmail: e.target.value })
     }
 
+    handleClickEnter = (e) => {
+        if (e.onKeyCode === 13) {
+            this.createUser();
+        }
+    }
+
     createUser = () => {
         const header = {
             headers: {
@@ -56,23 +62,26 @@ export default class Home extends React.Component {
             });
     };
 
+    
 
     render() {
         return (
             <Container>
                 <h2>Criar Usuário</h2>
                 <Inputs>
-                <input
-                    placeholder="Nome"
-                    value={this.state.inputName}
-                    onChange={this.handleName}
-                />
-                <input
-                    placeholder="E-mail"
-                    value={this.state.inputEmail}
-                    onChange={this.handleEmail}
-                />
-                <button onClick={this.createUser}>Criar</button>
+                    <input   
+                        placeholder="Nome"
+                        value={this.state.inputName}
+                        onChange={this.handleName}
+                    />
+                    <input
+                        onKeyDown={this.handleClickEnter}
+                        placeholder="E-mail"
+                        value={this.state.inputEmail}
+                        onChange={this.handleEmail}
+
+                    />
+                    <button onClick={this.createUser}>Criar</button>
                 </Inputs>
             </Container>
         )
