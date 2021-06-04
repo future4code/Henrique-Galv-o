@@ -1,6 +1,13 @@
 import React from 'react';
 import UserCard from './components/UserCard/UserCard'
 import Matches from './components/Matches/Matches'
+import styled from 'styled-components'
+
+const Body = styled.div`
+  display: flex;
+  justify-content:center;
+  align-items:center;
+`
 
 
 export default class App extends React.Component {
@@ -24,13 +31,15 @@ export default class App extends React.Component {
   }
 
 
+  
+
   render() {
     const showPage = this.renderPage();
     return (
-      <div className="App">
-        <h1>MinimalMatch</h1>
+      <Body>
+        
         {showPage}
-      </div>
+      </Body>
     );
   }
 }
