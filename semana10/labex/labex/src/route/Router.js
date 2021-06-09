@@ -4,6 +4,10 @@ import ListTripsPage from '../pages/ListTripsPage/ListTripsPage'
 import HomePage from "../pages/HomePage/HomePage"
 import ApplicationForm from "../pages/ApplicationForm/ApplicationForm"
 import AuthenticationPage from "../pages/AuthenticationPage/AuthenticationPage"
+import AdminPage from '../pages/AdminPage/AdminPage'
+import ErrorPage from '../pages/ErrorPage/ErrorPage'
+import TripDetailsPage from "../pages/TripDetailsPage/TripDetailsPage";
+import CreateTripPage from '../pages/CreateTripPage/CreateTripPage'
 
 const Router = () => {
     return (
@@ -26,8 +30,20 @@ const Router = () => {
                     <AuthenticationPage />
                 </Route>
 
+                <Route exact path="/admin">
+                    <AdminPage />
+                </Route>
+
+                <Route exact path="/admin/trip/create">
+                    <CreateTripPage />
+                </Route>
+
+                <Route exact path="/admin/trip/id">
+                    <TripDetailsPage />
+                </Route>
+
                 <Route>
-                    <HomePage />
+                    <ErrorPage />
                 </Route>
             </Switch>
         </BrowserRouter>

@@ -11,8 +11,6 @@ export default function ApplicationForm() {
     const history = useHistory();
     const pathParams = useParams();
 
-    
-
     return (
         <Main>
             <AstronautImg src={Astronaut} alt="astronaut">
