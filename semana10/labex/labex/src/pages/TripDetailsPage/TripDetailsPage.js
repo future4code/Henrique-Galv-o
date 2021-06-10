@@ -103,8 +103,8 @@ export default function TripDetailPage() {
                         <p>Nome: {candidate.name}</p>
                         <p>Profissão: {candidate.profession}</p>
                         <p>Motivo: {candidate.applicationText}</p>
-                        <button onClick={() => rejectTheCandidate(candidate.id)}>Reject</button>
-                        <button onClick={() => approveTheCandidate(candidate.id)}>Approve</button>
+                        <button onClick={() => rejectTheCandidate(candidate.id)}>Rejeitar</button>
+                        <button onClick={() => approveTheCandidate(candidate.id)}>Aprovar</button>
                     </div>
                 })}
 
