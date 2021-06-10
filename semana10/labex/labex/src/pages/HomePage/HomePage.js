@@ -3,7 +3,7 @@ import BackgroundHome from '../../img/BackgroundHome.jpg'
 import { Logo, Buttons, ButtonTrip, Main, ButtonRestrict } from './Styled'
 import LogoHome from '../../img/LogoHome.png'
 import { useHistory } from "react-router-dom";
-import { goToTripsPage, goToAuthenticationPage } from "../../route/coordinator"
+import { goToTripsPage,  goToAdminPage } from "../../route/coordinator"
 
 export default function HomePage() {
     const history = useHistory();
@@ -23,7 +23,7 @@ export default function HomePage() {
                     <ButtonTrip onClick={() => goToTripsPage(history)}>
                         <button>Viaje pelo Universo</button>
                     </ButtonTrip>
-                    <ButtonRestrict onClick={() => goToAuthenticationPage(history)}>
+                    <ButtonRestrict onClick={() => goToAdminPage(history)}>
                         <button>Area Restrita</button>
                     </ButtonRestrict>
                 </Buttons>

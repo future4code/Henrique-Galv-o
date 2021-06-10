@@ -47,13 +47,47 @@ export const Buttons = styled.div`
 
 export const TripCard = styled.div`
     background-color:white;
-    cursor:pointer;
     margin:1em;
-    padding:1em;
+    border-radius:1em;
+    padding:0 1% 0 1%;
     width:15rem;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
     align-items:center;
-    
+    h3{
+        :hover{
+        -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+        cursor:pointer;
+        }
+    }
+`
+
+export const ButtonsTrip = styled.div`
+    display:flex;
+    flex-direction:row;
+    margin-top:1em;
+    margin-bottom:1em;
+    button{
+        outline:none;
+        background-color:white;
+        border:0.01em solid #999;
+        color:black;
+        padding:0.1em 0.1em;
+        border-radius:10em;
+        font-family:'Quicksand';
+        font-weight:600;
+        :hover{
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+            cursor:pointer;
+          }
+        :active{
+            background-color:#999;
+            color:white;
+        }
+    }
 `

@@ -4,7 +4,6 @@ import { Main, Header, Logo, Buttons, TripContainer, Invite } from './Styled'
 import LogoHome from '../../img/LogoHome.png'
 import { useHistory } from "react-router-dom";
 import { goToHomePage, goToAuthenticationPage } from "../../route/coordinator"
-import Netuno from '../../img/Netuno.jpg'
 
 
 export default function ListTripsPage() {

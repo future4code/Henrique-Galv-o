@@ -36,7 +36,6 @@ export const Header = styled.div`
     
 `
 
-
 export const Logo = styled.div`
     margin-left:6vh;
     display:flex;
@@ -44,10 +43,16 @@ export const Logo = styled.div`
     align-items:center;
     background-color:#81B6CD;
     border-radius:50px;
-    height:5vh;
+    height:4vh;
     width:15vw;
     img{
-        height:4vh;
+        width:100%;
+    }
+    @media (max-width:800px){
+        width:0;
+        img{
+            width:0;
+        }
     }
 `
 
@@ -57,6 +62,9 @@ export const Buttons = styled.div`
     flex-direction:row;
     align-items:center;
     justify-content:center;
+    @media (max-width:800px){
+        margin-right:50px;
+    }
     button{
         font-size:1em;
         font-family: 'Quicksand', sans-serif;
@@ -72,7 +80,6 @@ export const Buttons = styled.div`
                 -ms-transform: scale(1.1);
                 transform: scale(1.1);
         }
-        
     }
 `
 

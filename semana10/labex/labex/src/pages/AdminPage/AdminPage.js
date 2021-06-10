@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import BackgroundHome from '../../img/BackgroundHome.jpg'
-import { Main, Logo, Buttons, TripCard } from './Styled'
+import { Main, Logo, Buttons, TripCard, ButtonsTrip } from './Styled'
 import { useHistory } from "react-router-dom";
-import { goToCreateTripPage, goToHomePage, goToTripDetailsPage } from '../../route/coordinator'
+import { goToAuthenticationPage, goToCreateTripPage, goToHomePage } from '../../route/coordinator'
 import { useProtectedPage } from '../../hooks/useProtectedPage'
 import LogoHome from '../../img/LogoHome.png'
 import useRequestData from '../../hooks/useRequestData'
@@ -11,9 +11,13 @@ import {BASE_URL} from '../../constants/urls'
 
 export default function AdminPage() {
     const history = useHistory();
-    const [tripsData] = useRequestData("/trips", {})
+    const [tripsData, getTrips] = useRequestData("/trips", {})
 
     useProtectedPage()
+
+    const getDetails = (id, name) =>{
+        history.push(`/admin/${id}/${name}`)
+    }
 
     const delTrip = (id, getTrips) =>{
         
@@ -25,20 +29,27 @@ export default function AdminPage() {
             }
         })
         .then(()=>{
-            alert('Viagem Apagada!')
-            history.refresh('/admin')
-            
+            alert('Viagem Apagada!')   
+
         })
         .catch((err)=>{
             alert(err.response)
         })
     }
-    console.log(localStorage.getItem('token'))
+    
+    useEffect(()=>{
+        getTrips()
+    })
+
+    const logout = (history) =>{
+        localStorage.removeItem('token')
+        goToAuthenticationPage(history)
+    }
   
     return (
         <div style={{
             backgroundImage: `url(${BackgroundHome})`,
-            height: '100vh',
+            height:'150vh',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover  '
@@ -50,20 +61,18 @@ export default function AdminPage() {
                 <Buttons>
                     <button onClick={() => goToHomePage(history)}>Voltar</button>
                     <button onClick={()=> goToCreateTripPage(history)}>Criar Viagem</button>
-                    <button>Logout</button>
+                    <button onClick={()=> logout(history)}>Logout</button>
                 </Buttons>
 
                 {tripsData.trips && tripsData.trips.map((trip) => {
                     return <TripCard key={trip.id}>
-                            <h3>{trip.name}</h3>
-                            <button onClick={() => goToTripDetailsPage(history, trip.id)}>Go</button>
+                            <h3 onClick={() => getDetails(trip.id, trip.name)}>{trip.name}</h3>
+                            <ButtonsTrip>
                             <button onClick={()=>delTrip(trip.id)} key={trip.id}>X</button>
+                            </ButtonsTrip>
                         </TripCard>
                 })
                 }
-               
-
-                <button >Logout</button>
 
             </Main>
         </div>

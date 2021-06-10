@@ -12,24 +12,28 @@ export const Main = styled.div`
 
 export const Logo = styled.div`
     background-color:#81B6CD;
-    border-radius:50px;
+    border-radius:15em;
+    width:44%;
+    img{
+        width:100%;
+    }
 `
 
 export const Buttons = styled.div`
     display:flex;
     flex-direction:row;
-    margin-top:16px;
+    margin-top:1em;
     
 `
 export const ButtonTrip = styled.button`
-    margin-right:32px;
+    margin-right:10%;
     outline:none;
     background-color:white;
     color:white;
     border:none;
     border-radius:50px;
-    width:200px;
-    height:50px;
+    width:14em;
+    height:4em;
     :hover{
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
@@ -51,8 +55,8 @@ export const ButtonRestrict = styled.button`
     color:white;
     border:3px solid white;
     border-radius:50px;
-    width:200px;
-    height:50px;
+    width:14em;
+    height:4em;
     button{
         font-family: 'Quicksand', sans-serif;
         outline:none;

@@ -14,6 +14,10 @@ export const Logo = styled.div`
     background-color:#81B6CD;
     border-radius:5em;
     z-index:2;
+    width:44%;
+    img{
+        width:100%;
+    }
 `
 
 export const Buttons = styled.div`
@@ -54,14 +58,21 @@ export const LoginContainer = styled.div`
       width:30%;
       display:flex;
       align-items:center;
-      justify-content:center;
+      justify-content:space-between;
       padding:16px;
       margin-top:8px;
       border:1px solid #999;
       border-radius:1em;
       z-index:2;
+      @media (max-width:800px){
+          width:80%;
+          button{
+              width:100%;
+          }
+      }
 `
-export const Login = styled.div`
+export const Login = styled.form`
+
     input{
         width:80%;
         margin:8px;
@@ -91,4 +102,7 @@ export const AlienImage = styled.img`
     bottom:0;
     z-index:1;
     right:10%;
+    @media (max-width:800px){
+        height:30%;
+    }
 `

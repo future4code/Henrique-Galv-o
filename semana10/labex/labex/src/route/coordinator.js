@@ -20,11 +20,11 @@
   }
  
   export const goToTripDetailsPage = (history) =>{
-    history.push('/admin/trip/id')
+    history.push('/admin/:id/:name')
   }
 
   export const goToCreateTripPage = (history) =>{
-    history.push('/admin/trip/create')
+    history.push('/admin/create')
   }
 
   export const goBackToTrips = (history) =>{
