@@ -84,6 +84,9 @@ export const Buttons = styled.div`
 `
 
 export const Invite = styled.div`
+    @media(max-width:800px){
+        margin-top:60%;
+    }
     margin-top:60vh;
     p{
         font-size:1.25em;
