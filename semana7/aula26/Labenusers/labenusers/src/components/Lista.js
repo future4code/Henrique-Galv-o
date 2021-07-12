@@ -63,27 +63,26 @@ export default class Lista extends React.Component {
                 Authorization: "henrique-galvao-paiva"
             }
         };
-        axios
-        .delete(`https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`, header)
-        .then((res)=> {
-            this.getUsers()
-            console.log(res)
-        })
-        .catch((err)=> {
-            alert(err)
-        })
-    }
 
+        if (window.confirm('Tem certeza que deseja apagar esse usuario?')) {
+            axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`, header)
+                .then((res) => {
+                    this.getUsers()
+                    console.log(res)
+                })
+        }
+    }
 
     render() {
         const usuariosComponents = this.state.usuarios.map((user) => {
-            return <li key={user.id}>{user.name}<button onClick={() => this.delUsers(user.id)}>Deletar</button></li>;
+            return <li key={user.id}>{user.name}<button>Detalhes</button><button onClick={() =>
+                this.delUsers(user.id)}>Deletar</button></li>;
         });
         return (
             <Main>
                 <h2>Lista de Usuarios</h2>
                 <Listas>
-                {usuariosComponents}
+                    {usuariosComponents}
                 </Listas>
             </Main>
         )
